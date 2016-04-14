@@ -1,0 +1,155 @@
+<html>
+<head>
+<title>Java script </title> 
+
+<style type="text/css">
+	
+	H1,h2,h3,h4,h5,body,div,span,p{margin: 0px; padding: 0px; font-family: arial; font-weight: normal; }
+
+	body{
+		background-color: #E8E8E8 ;
+		min-width: 300px;
+		}
+
+		 
+	.formJs{
+		width: 100%;
+		max-width: 400px;
+		margin: 50px auto;
+		padding: 20px;
+		background-color: #C8C8C8; 
+		border: 1px solid black;
+		border-radius: 5px;
+		box-shadow: 0px 0px 20px 10px #A8A8A8   ;
+		}	
+		.formJs > h2{
+			width: 100%;
+			max-width: 400px;
+			text-align: center;
+			margin: 20px auto;
+			}
+		.formJs > h3{
+			border-bottom: 3px solid black  ;
+			}
+	/* This class is for common code for every sub container */		
+	div{
+		width: 100%;
+		max-width: 400px;
+		margin: 50px auto;
+		}
+
+	#Incomplete-task > div{
+		border-bottom: 1px solid #E8E8E8  ;
+		padding: 2px;
+		box-sizing: border-box;
+		}
+
+
+	/* Taken attribute selectors to target some elements */
+	input[type = "text"]{
+		width: 100%;
+		max-width: 70%;
+		height: 23px;
+		padding-left: 10px;
+		background-color: #E8E8E8  ;
+		margin-bottom: 20px;
+		}
+
+	label{
+		height: 42px;
+		width: 100%;
+		max-width: 70%;
+		margin-left: 5px;
+		display: inline-block;
+		}
+
+
+	button{
+		width: 50px; 
+		float: right;
+		height: 23px;
+		border-radius: 5px;
+		}	
+		
+	span{
+		float: right;
+		width: 50px;
+		}
+
+	#completed-task div label{
+		text-decoration: line-through;
+	}
+
+</style>
+
+</head>
+	<body>
+		<!-- formjs is the main container taken for total form -->
+		<form class="formJs" id="formEnter"> 
+			<h2> ToDo List </h2>    
+
+			<h3>ADD ITEM</h3>
+				
+			<div>
+				<input type="text" name="additem" id="add-task" onkeypress="myFunction(event)"></input>
+				<button type="button" id = "add-button">  Add </button>
+			</div>
+			
+
+
+			<!-- This class is for common code for every sub container and this is incomplete task -->
+			<h3>TODO</h3>	
+			
+			<div id = "Incomplete-task">  
+
+				<div> 
+					<input type="checkbox"></input>
+					<label> Pay Bills </label>
+					
+					<span>
+						<button class = "editButton" type = "button"> Edit </button>
+						<button class = "deleteButton" type = "button"> Delete </button>
+					</span>
+				</div>
+
+				
+				<div> 
+					<input type = "checkbox"></input>
+					<input type = "text" placeholder="Go Shopping"> </input>
+					
+					<span>
+						<button class = "editButton" type = "button"> Edit </button> 
+						<button class = "deleteButton" type = "button"> Delete </button>
+					</span>
+				</div>
+
+
+			</div>
+				
+
+
+			<!-- This class is for common code for every sub container and this is completed task -->
+			
+			<h3>COMPLETED</h3>	
+				
+			<div id = "completed-task">
+
+				<div> 
+					<input type = "checkbox" checked></input>
+					<label> See the Doctor </label>				
+
+					<span>
+						<button class = "editButton" type = "button"> Edit </button>
+						<button class = "deleteButton" type = "button">Delete</button>
+					</span>
+				</div>
+			</div>
+
+
+		</form>	
+
+		<script src = "ToDo-Js_kumar.js"> </script>
+		
+	   
+	</body>
+</html>
